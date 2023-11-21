@@ -30,7 +30,7 @@ trait MediaAlly
      */
     public function attachMedia($file, $options = [])
     {
-        if(! file_exists($file)) {
+        if(! file_exists($file->getRealPath())) {
             throw new Exception('Please pass in a file that exists');
         }
 
